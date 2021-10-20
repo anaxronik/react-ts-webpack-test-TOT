@@ -1,0 +1,27 @@
+@import "../../styles/vars.scss";
+
+.note {
+  background-color: $color-white;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-grey-dark;
+  }
+
+  &__title {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 24px;
+  }
+
+  &__todos {
+    margin-top: 10px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

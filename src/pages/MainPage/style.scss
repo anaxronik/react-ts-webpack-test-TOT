@@ -1,0 +1,9 @@
+.main-page {
+  padding-top: 40px;
+
+  &__notes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
