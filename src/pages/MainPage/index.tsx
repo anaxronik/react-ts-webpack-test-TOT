@@ -3,7 +3,7 @@ import Note from "../../components/Note";
 import { TNote } from "../../types";
 import "./style.scss";
 
-const notes: TNote[] = [
+export const notes: TNote[] = [
   {
     id: "1",
     title: "title 1",

@@ -1,0 +1,10 @@
+.note-item {
+  padding-top: 40px;
+
+  &__title {
+    &-label {
+      color: grey;
+      margin-right: 10px;
+    }
+  }
+}
