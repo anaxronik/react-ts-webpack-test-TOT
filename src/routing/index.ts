@@ -2,8 +2,9 @@ import { ComponentType } from "react";
 import MainPage from "../pages/MainPage";
 import NoteItemPage from "../pages/NoteItemPage";
 
-enum routes {
+export enum routes {
   main = "/",
+  notes = "/notes",
   noteItem = "/notes/:id",
 }
 
