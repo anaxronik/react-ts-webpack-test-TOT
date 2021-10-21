@@ -1,5 +1,5 @@
 import React from "react";
-import { TTodo } from "../../types";
+import { TTodo } from "../../types/todo";
 import "./style.scss";
 
 interface IProps extends TTodo {}

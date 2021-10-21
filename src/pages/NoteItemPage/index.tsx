@@ -1,9 +1,6 @@
 import React from "react";
 import { useParams } from "react-router";
-import { notes } from "../MainPage";
 import "./style.scss";
-
-const note = notes[0];
 
 const NoteItemPage = () => {
   const { noteId } = useParams<{ noteId: string }>();
@@ -14,13 +11,13 @@ const NoteItemPage = () => {
         <label className="note-item__title-label" htmlFor="title">
           Название заметки
         </label>
-        <input
+        {/* <input
           className="note-item__title-input"
           type="text"
           value={note.title}
           name="title"
           onChange={() => {}}
-        />
+        /> */}
       </div>
       <div className="note-item__todos">asdsad</div>
     </div>

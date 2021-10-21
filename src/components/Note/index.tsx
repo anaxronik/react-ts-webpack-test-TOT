@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { routes } from "../../routing";
-import { TNote } from "../../types";
+import { TNote } from "../../types/note";
 import Todo from "../Todo";
 import "./style.scss";
 

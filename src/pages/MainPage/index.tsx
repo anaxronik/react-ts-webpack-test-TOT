@@ -1,36 +1,19 @@
 import React from "react";
 import Note from "../../components/Note";
-import { TNote } from "../../types";
+import { useStoreSelector } from "../../store/reducers";
 import "./style.scss";
 
-export const notes: TNote[] = [
-  {
-    id: "1",
-    title: "title 1",
-    todos: [
-      { id: "1", isComplete: false, text: "Чекнуть" },
-      { id: "2", isComplete: true, text: "Дунуть" },
-    ],
-  },
-  {
-    id: "2",
-    title: "title 2",
-    todos: [],
-  },
-  {
-    id: "3",
-    title: "title 3",
-    todos: [],
-  },
-];
-
 const MainPage = () => {
+  const notes = useStoreSelector((state) => state.notesReducer.notes);
+
   return (
     <div className="main-page container">
       <div className="main-page__notes">
         {notes.map((note) => (
           <Note {...note} key={note.id} />
         ))}
+
+        {!notes?.length && <div className="main-page__empty">Заметок нет</div>}
       </div>
     </div>
   );

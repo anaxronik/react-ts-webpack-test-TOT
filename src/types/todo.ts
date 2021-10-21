@@ -3,9 +3,3 @@ export type TTodo = {
   text: string;
   isComplete: boolean;
 };
-
-export type TNote = {
-  id: string;
-  title: string;
-  todos: TTodo[];
-};
