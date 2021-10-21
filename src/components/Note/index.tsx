@@ -9,14 +9,16 @@ interface IProps extends TNote {}
 
 const Note: React.FC<IProps> = ({ title, todos, id }) => {
   return (
-    <NavLink to={`${routes.notes}/${id}`} className="note">
-      <div className="note__title">{title}</div>
+    <div className="note">
+      <NavLink className="note__title" to={`${routes.notes}/${id}`}>
+        {title}
+      </NavLink>
       <div className="note__todos">
         {todos.map((todo) => (
           <Todo {...todo} key={todo.id} />
         ))}
       </div>
-    </NavLink>
+    </div>
   );
 };
 

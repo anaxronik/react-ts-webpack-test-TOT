@@ -5,16 +5,12 @@ export interface INotesState {
   notes: TNote[];
 }
 
-export interface INotesAction {
-  type: NotesActionTypes;
-  payload?: any;
+export interface ISetNotesAction {
+  type: NotesActionTypes.SET_NOTES;
+  payload: TNote[];
 }
 
-export interface IGetUserAction {
-  type: NotesActionTypes.GET_NOTES;
-}
-
-export type TNoteAction = IGetUserAction;
+export type TNoteAction = ISetNotesAction;
 
 export type TNote = {
   id: string;
