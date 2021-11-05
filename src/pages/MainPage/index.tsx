@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
 import Note from "../../components/Note";
-import { getNotes } from "../../store/actionCreator/notes";
+import { useActions } from "../../store/actionCreator";
 import { useStoreSelector } from "../../store/reducers";
 import "./style.scss";
 
 const MainPage = () => {
   const notes = useStoreSelector((state) => state.notesReducer.notes);
-  const dispatch = useDispatch();
+  const { getNotes } = useActions();
 
   useEffect(() => {
-    dispatch(getNotes());
+    getNotes();
   }, []);
 
   return (

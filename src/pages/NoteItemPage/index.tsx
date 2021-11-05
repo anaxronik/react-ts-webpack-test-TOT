@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import "./style.scss";
 
 const NoteItemPage = () => {
   const { noteId } = useParams<{ noteId: string }>();
+
+  useEffect(() => {}, []);
 
   return (
     <div className="note-item container">

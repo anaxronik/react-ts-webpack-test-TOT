@@ -1,3 +1,4 @@
+import { CurrentNoteActionTypes } from "../store/reducers/currenNoteReducer";
 import { NotesActionTypes } from "../store/reducers/notesReducer";
 import { TTodo } from "./todo";
 
@@ -17,3 +18,10 @@ export type TNote = {
   title: string;
   todos: TTodo[];
 };
+
+export type TSetCurrentNoteActionType = {
+  type: CurrentNoteActionTypes.SET_NOTE;
+  payload: TNote;
+};
+
+export type TCurrentNoteActionType = TSetCurrentNoteActionType;
